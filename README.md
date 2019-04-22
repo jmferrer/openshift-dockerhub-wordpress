@@ -7,8 +7,16 @@ This template is based in the template used in [this blog post](https://blog.ope
 [this repository](https://github.com/openshift-evangelists/wordpress-quickstart)
 and translated to yaml.
 
-You will need to upload wordpress image to openshift project following this
-procedure:
+You will need to create a wordpress imagestream in openshift project uploading
+image or importing it. Choose one of the following:
+
+* Import image:
+```
+oc import image docker.io/wordpress --confirm --namespace=openshift
+```
+
+* Upload wordpress image to registry in openshift project following this
+  procedure:
 ```
 docker login docker-registry-default.youropenshift.example.com -p $(oc whoami -t)
 docker pull wordpress
