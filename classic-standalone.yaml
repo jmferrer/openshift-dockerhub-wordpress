@@ -179,7 +179,7 @@ objects:
             value: wp_
           volumeMounts:
           - name: data
-            mountPath: "/opt/app-root/src"
+            mountPath: "/var/www/html"
 - kind: DeploymentConfig
   apiVersion: v1
   metadata:
